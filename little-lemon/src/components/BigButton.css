@@ -1,0 +1,31 @@
+.big-button-container {
+    /* padding: 20px; */
+}
+
+button.big-button {
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    border-radius: 16px;
+    background-color: #F4CE14;
+    margin: 20px 0px 20px 0px;
+}
+
+/* .button button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+.button-container button:hover {
+    background-color: #0056b3;
+} */

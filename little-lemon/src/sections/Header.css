@@ -1,0 +1,16 @@
+#header-logo {
+    margin: 15px;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+    padding: 10px;
+    color: #333333;
+    text-decoration: none;
+}

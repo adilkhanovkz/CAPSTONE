@@ -1,0 +1,28 @@
+#testinomials {
+    background-color: #495E57;
+}
+
+#testinomials > div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 875px;
+    padding: 20px;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+#testinomials h1{
+    color:#F4CE14;
+ }
+ .testinomial-cards{
+    display: flex;
+    justify-content: space-between;
+    gap:10px;
+    flex-wrap: wrap;
+ }
+ #test-id {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
