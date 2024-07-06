@@ -5,6 +5,7 @@ import './Specials.css';
 import image1 from '../icons_assets/greek salad.jpg';
 import image2 from '../icons_assets/bruchetta.svg';
 import image3 from '../icons_assets/lemon dessert.jpg';
+import { Link } from 'react-router-dom';
 
 function Specials(){
     return (
@@ -12,7 +13,7 @@ function Specials(){
             <div id="specials">
                 <div className="rows">
                     <h1>This Week Specials!</h1>
-                    <BigButton title="Order Online"/>
+                    <BigButton title="Order Online" linkto="/order-online"/>
                 </div>
                 <div className="rows">
                     <Card 
