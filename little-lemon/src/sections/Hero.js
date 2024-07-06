@@ -6,8 +6,7 @@ import './Hero.css';
 function Hero(){
     return (
         <section class="section" id="hero">
-            <article>
-                <div class="flex-class">
+                <article class="flex-class">
                     <div class="info">
                         <h1>Little Lemon</h1>
                         <h2>Chicago</h2>
@@ -18,8 +17,7 @@ function Hero(){
                     </div>
 
                     <img src={restauranfood} id="hero-image" class="image" width={350} height={450} alt='hero-image'/>
-                </div>
-            </article>
+                </article>
         </section>
     );
 }
