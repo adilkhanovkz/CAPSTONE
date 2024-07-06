@@ -24,8 +24,8 @@ function Footer(){
                 </div>
                 <div >
                     <h6>Social links</h6>
-                    <a href="https://instagram.com"><p>Instagram</p></a>
-                    <a href="https://facebook.com"><p>Facebook</p></a>
+                    <a href="https://instagram.com" target='_blank'><p>Instagram</p></a>
+                    <a href="https://facebook.com" target='_blank'><p>Facebook</p></a>
                 </div>
             </div>
         </footer>
