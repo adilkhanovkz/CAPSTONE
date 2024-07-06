@@ -1,8 +1,11 @@
 import React from "react";
-
+import BookingForm from "../components/BookingForm";
 
 export default function ReserveTable(){
     return (
-        <h1>ReserveTable</h1>
+
+        <section class='section'>
+            <BookingForm />
+        </section>
     );
 }
