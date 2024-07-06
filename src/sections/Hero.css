@@ -1,0 +1,23 @@
+#hero {
+    background-color: #495E57;
+}
+
+#hero-image {
+    border-radius: 16px;
+    margin: 20px 0px -40px 0px;
+}
+
+#hero h1 {
+    color: #F4CE14;
+}
+
+#hero h2 {
+    color: white;
+}
+#hero h4 {
+    color: white;
+    max-width: 300px;
+}
+#hero .flex-class{
+    margin-top:20px;
+}
