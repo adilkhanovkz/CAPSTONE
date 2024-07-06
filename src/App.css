@@ -60,6 +60,14 @@ p {
   color: #495E57;
 }
 
+a{
+  text-decoration: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 .section {
   display: flex;
   align-items: center;
