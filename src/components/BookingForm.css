@@ -1,0 +1,8 @@
+input, select { 
+    font-family: 'Karla', sans-serif; /* Example font family */
+    font-size: 16pt;
+    display: grid;
+    max-width: 200px;
+    gap: 20px;
+    place-items: center;
+}
