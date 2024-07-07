@@ -3,6 +3,9 @@ import React from "react";
 
 export default function OrderOnline(){
     return (
-        <h1>Order online</h1>
+        <section class='section'>
+            <h1>Order online</h1>
+            </section>
+        
     );
 }

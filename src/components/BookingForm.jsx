@@ -1,23 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useReducer,useRef  } from 'react';
 import './BookingForm.css';
+import { getToday, getWeekFromToday } from '../utils';
 
-const BookingForm = () => {
+
+
+const BookingForm = (props) => {
   // Step 2: Declare state variables for form fields and available times
-  const [date, setDate] = useState('');
+  const [date, setDate] = useState(getToday());
   const [time, setTime] = useState('');
-  const [gnum, setGNum] = useState('');
-  const [guestNum, setGuestNum] = useState(['1','2','3','4','5','6','7','8']);
-  const [availableTimes, setAvailableTimes] = useState([
-    '17:00', '18:00', '19:00', '20:00', '21:00'
-  ]);
+  const [gnum, setGNum] = useState('1');
+  const [occasion, setOccasion] = useState('');
+  
+  const occasions = ['Birthday', 'Aniversary', 'Engagement'];
 
   // Step 3: Handle change events for form fields
   const handleDateChange = (e) => {
+    const newDate = new Date(e.target.value)
+    props.dispatchAvailableTimes(newDate);
     setDate(e.target.value);
   };
 
   const handleTimeChange = (e) => {
     setTime(e.target.value);
+  };
+
+  const handleOccasionChange = (e) => {
+    setOccasion(e.target.value);
   };
 
   const handleGNum = (e) => {
@@ -33,41 +41,69 @@ const BookingForm = () => {
 
   return (
     <form  onSubmit={handleSubmit}>
-      <label htmlFor="res-date"><h5>Choose date:</h5></label>
-      <input 
-        type="date" 
-        id="res-date" 
-        value={date} 
-        onChange={handleDateChange} 
-      />
+      <div className='form-input'>
+        <label htmlFor="res-date"><h5>Choose date:</h5></label>
+        <input
+          type="date" 
+          id="res-date" 
+          name="date"
+          value={date} 
+          onChange={handleDateChange} 
+          min={getToday()}
+          max={getWeekFromToday()}
+        />
+      </div>
 
+      <div className='form-input'>
       <label htmlFor="res-time"><h5>Choose time:</h5></label>
       <select 
         id="res-time" 
         value={time} 
         onChange={handleTimeChange}
       >
-        {availableTimes.map((availableTime, index) => (
+        {props.availableTimes.map((availableTime, index) => (
           <option key={index} value={availableTime}>
             {availableTime}
           </option>
         ))}
       </select>
+      </div>
+
+      <div className='form-input'>
       <label><h5>Number of guests:</h5></label>
-      <chose 
+      <input
+      type="number"
         id="res-num" 
         value={gnum}
         onChange={handleGNum}
+        min={1}
+        max={10}
+        placeholder='1'
+      />
+       </div>
+
+      <div className='form-input'>
+      <label htmlFor="res-time"><h5>Occasion:</h5></label>
+      <select 
+        id="res-occasion" 
+        value={occasion} 
+        onChange={handleOccasionChange}
       >
-        {guestNum.map((num, index) => (
-          <option key={index} value={num}>
-            {num}
+        {occasions.map((occasion, index) => (
+          <option key={index} value={occasion}>
+            {occasion}
           </option>
         ))}
-      </chose>
-      <button class='big-button' type='submit'><h3>Submit</h3></button>
+      </select>
+      </div>
+
+       <div className='button'>
+      <button id='bookSubmit' class='big-button' type='submit'><h3>Submit</h3></button>
+      </div>
     </form>
+    
   );
 };
 
 export default BookingForm;
+

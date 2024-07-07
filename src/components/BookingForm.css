@@ -6,3 +6,27 @@ input, select {
     gap: 20px;
     place-items: center;
 }
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: baseline;
+    gap: 30px;
+    max-width: 500px;
+}
+
+form .form-input{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+#bookSubmitButton {
+    display: flex;
+    justify-items: center;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+}
